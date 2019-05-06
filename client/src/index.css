@@ -70,3 +70,8 @@ body {
   padding: 5px 10px;
   background-color: lightskyblue;
 }
+
+.link {
+  text-decoration: none;
+  color: black;
+}
