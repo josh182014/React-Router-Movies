@@ -39,8 +39,6 @@ export default class Movie extends Component {
   }
   
   render() {
-    console.log(this.props)
-    console.log(this.state.movie)
     if (!this.state.movie) {
       return <div>Loading movie information...</div>;
     }
