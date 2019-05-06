@@ -14,7 +14,6 @@ export default class App extends Component {
   }
 
   addToSavedList = movie => {
-    console.log('movie', movie)
     const savedList = this.state.savedList;
     // if (savedList.length === 0 ) {
     //   savedList.push(movie);
@@ -39,6 +38,12 @@ export default class App extends Component {
       alert(`You already added ${movie.title} to your Saved Movies :)`)
     }
   };
+
+  // const savedList = this.state.savedList;
+  // if (savedList.filter(savedMovie => savedMovie.id === movie.id).length > 0) return;
+
+  // savedList.push(movie);
+  // this.setState({ savedList });
 
   render() {
     return (
