@@ -30,20 +30,24 @@ export default class App extends Component {
     //     }
     //   })
     // }
-    if (!savedList.includes(movie)) {
-      savedList.push(movie);
-      this.setState({ savedList });
-    }
-    else {
-      alert(`You already added ${movie.title} to your Saved Movies :)`)
-    }
+    // if (!savedList.includes(movie)) {
+    //   savedList.push(movie);
+    //   this.setState({ savedList });
+    // }
+    // else {
+    //   alert(`You already added ${movie.title} to your Saved Movies :)`)
+    // }
+
+    if (savedList.filter(savedMovie => savedMovie.id === movie.id).length > 0) {
+      alert(`You already added ${movie.title} to your Saved Movies. :)`)
+      return;
+    } 
+
+    savedList.push(movie);
+    this.setState({ savedList });
+
   };
 
-  // const savedList = this.state.savedList;
-  // if (savedList.filter(savedMovie => savedMovie.id === movie.id).length > 0) return;
-
-  // savedList.push(movie);
-  // this.setState({ savedList });
 
   render() {
     return (
